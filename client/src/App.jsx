@@ -24,10 +24,10 @@ const App = () => {
       <Route exact path="/">
           <LoginPage />
         </Route>
-        <Route exact path="/companies/me">  
+        <Route path="/companies/me">  
           <Calendar />  
         </Route>
-        <Route exact path="/contacts">
+        <Route  path="/contacts">
           <Contacts />
         </Route>
         {/* <Route exact path="/map">
@@ -45,13 +45,13 @@ const App = () => {
         <Route path="/clients">
           <ClientsPage />
         </Route>
-        <Route exact path="/client/:id">
+        <Route path="/client/:id">
           <Contact />
         </Route>
-        <Route exact path="/add-client">
+        <Route path="/add-client">
           <CreateCustomer />
         </Route>
-        <Route exact path="/invite-successful/:id">
+        <Route path="/invite-successful/:id">
           <InviteSuccessPage />
         </Route>
         <Route path="/ProfilePage">
