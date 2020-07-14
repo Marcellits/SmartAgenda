@@ -17,7 +17,7 @@ const AppConfirmationPage = () => {
 
   useEffect(() => {
     const getData = async () => {
-      axios.get(`http://localhost:8080/appointments/${id}`).then((response) => {
+      axios.get(`/appointments/${id}`).then((response) => {
         setApiData(response.data);
       });
     };
@@ -27,7 +27,7 @@ const AppConfirmationPage = () => {
 
   useEffect(() => {
     const getCompany = async () => {
-      axios.get(`http://localhost:8080/companies/${owner}`).then((response) => {
+      axios.get(`/companies/${owner}`).then((response) => {
         setCompanyName(response.data);
       });
     };
@@ -43,7 +43,7 @@ const AppConfirmationPage = () => {
     e.preventDefault();
     await axios({
       method: 'PATCH',
-      url: `http://localhost:8080/appointments/${id}`,
+      url: `/appointments/${id}`,
       data: {
         date
       },

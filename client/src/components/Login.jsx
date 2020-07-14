@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     await axios({
       method: 'POST',
-      url: `http://localhost:8080/companies/login`,
+      url: `/companies/login`,
       data: {
         email: email,
         password: password
