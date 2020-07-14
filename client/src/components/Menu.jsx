@@ -5,13 +5,25 @@ import './styles.css';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { AppContext, AppContextProvider } from '../context/AppContext';
+import axios from 'axios';
+
 export default function Menu() {
   const history = useHistory();
-  const Logout = () => {
+
+  const Logout = async () => {
+    const token = localStorage.getItem("token")
+    await axios({
+      method: "POST",
+      url: `/companies/logout`,
+      headers: {Authorization: `Bearer ${token}`}
+    })
+    .then(({data}) =>{
     localStorage.removeItem('token');
     history.push('/login');
     window.location.reload();
-  };
+  })
+  .catch(e => console.log(e.message.toString()))
+}
   // const { setUser, setLoggedIn } = useContext(AppContext);
   const { user, setUser } = useContext(AppContext);
   const { loggedIn, setLoggedIn } = useContext(AppContext);
