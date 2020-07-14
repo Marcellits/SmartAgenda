@@ -13,7 +13,7 @@ const InviteSuccessPage = () => {
 
   useEffect(() => {
     const getData = async () => {
-      axios.get(`http://localhost:8080/appointments/${id}`).then((response) => {
+      axios.get(`/appointments/${id}`).then((response) => {
         setApiData(response.data);
         console.log(response.data);
       });
@@ -23,7 +23,7 @@ const InviteSuccessPage = () => {
 
   const getCustomer = (name) => {
     axios
-      .get(`http://localhost:8080/customers/${name}`, {
+      .get(`/customers/${name}`, {
         headers: {
           authorization: `${localStorage.getItem('token')}`
         }

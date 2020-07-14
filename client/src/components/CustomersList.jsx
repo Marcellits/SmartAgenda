@@ -18,7 +18,7 @@ const CustomersList = () => {
   };
   const getData = () => {
     axios
-      .get(`http://localhost:8080/customers/all/`, {
+      .get(`/customers/all/`, {
         headers: {
           authorization: `${localStorage.getItem('token')}`
         }

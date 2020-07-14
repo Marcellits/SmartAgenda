@@ -22,7 +22,7 @@ const Contact = () => {
   useEffect(() => {
     const getData = async () => {
       axios
-        .get(`http://localhost:8080/customers/${id}`, {
+        .get(`/customers/${id}`, {
           headers: {
             authorization: `${localStorage.getItem('token')}`
           }

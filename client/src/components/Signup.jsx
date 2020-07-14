@@ -15,7 +15,7 @@ const Signup = () => {
     e.preventDefault();
     await axios({
       method: 'POST',
-      url: `http://localhost:8080/companies`,
+      url: `/companies`,
       data: {
         companyName,
         password,

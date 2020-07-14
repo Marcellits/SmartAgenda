@@ -19,7 +19,7 @@ const AppInvitePage = () => {
   useEffect(() => {
     const getData = async () => {
       axios
-        .get(`http://localhost:8080/customers/${id}`, {
+        .get(`/customers/${id}`, {
           headers: {
             authorization: `${localStorage.getItem('token')}`
           }
@@ -41,7 +41,7 @@ const AppInvitePage = () => {
     e.preventDefault();
     await axios({
       method: 'POST',
-      url: `http://localhost:8080/appointments?email=${email}`,
+      url: `/appointments?email=${email}`,
       data: {
         duration,
         service,

@@ -12,7 +12,7 @@ const CreateCustomer = () => {
     e.preventDefault();
     await axios({
       method: 'POST',
-      url: `http://localhost:8080/customers`,
+      url: `/customers`,
       data: {
         customer,
         phone,

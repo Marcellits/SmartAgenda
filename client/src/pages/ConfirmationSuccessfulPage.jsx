@@ -15,11 +15,11 @@ const ConfirmationSuccessfulPage = () => {
 
   //Calling data from appointment and company
   const getData = () => {
-    axios.get(`http://localhost:8080/appointments/${id}`).then((response) => {
+    axios.get(`/appointments/${id}`).then((response) => {
       setApiData(response.data);
     });
     const owner = apiData.company;
-    axios.get(`http://localhost:8080/companies/${owner}`).then((response) => {
+    axios.get(`/companies/${owner}`).then((response) => {
       setCompanyName(response.data);
     });
   };

@@ -12,7 +12,7 @@ const AppContextProvider = ({ children }) => {
   useEffect(() => {
     if (token) {
       axios
-        .get(`http://localhost:8080/companies/me`, {
+        .get(`/companies/me`, {
           headers: { Authorization: `Bearer ${token}` }
         })
         .then(({ data }) => {

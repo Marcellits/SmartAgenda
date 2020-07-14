@@ -64,7 +64,7 @@ const Profile = () => {
   const profile = async (e) => {
     const { data } = await axios({
       method: 'PATCH',
-      url: `http://localhost:8080/companies/${company._id}`,
+      url: `/companies/${company._id}`,
       headers: {
         authorization: localStorage.getItem('token')
       },
