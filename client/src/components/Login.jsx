@@ -27,7 +27,7 @@ const Login = () => {
         setLoggedIn(true);
         setEmail('');
         setPassword('');
-        history.push('/companies/me');
+        history.push('/calendar');
       })
       .catch((e) => window.alert('Crendentials error'));
   };

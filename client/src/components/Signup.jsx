@@ -31,7 +31,7 @@ const Signup = () => {
         setPassword('');
         setUsername('');
         localStorage.setItem('token', data.token);
-        history.push('/companies/me');
+        history.push('/calendar');
         window.alert('Account created succesfully.');
       })
       .catch((e) => window.alert('Email or password invalid'));
