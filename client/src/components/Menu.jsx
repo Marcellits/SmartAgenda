@@ -49,7 +49,7 @@ export default function Menu() {
   const signedOut = (
     <div>
       <Navbar expand="lg" bg="dark" variant="dark" className="navbar-custom">
-        <Navbar.Brand href="/companies/me">S M A R T A G E N D A</Navbar.Brand>
+        <Navbar.Brand>S M A R T A G E N D A</Navbar.Brand>
       </Navbar>
     </div>
   );
