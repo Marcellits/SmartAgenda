@@ -33,9 +33,9 @@ export default function Menu() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/companies/me">Calendar</Nav.Link>
-            <Nav.Link href="/clients">Clients</Nav.Link>
-            <Nav.Link href="/ProfilePage">Profile</Nav.Link>
+            <Nav.Link href="/companies/me">Calendar </Nav.Link>
+            <Nav.Link href="/clients">Clients </Nav.Link>
+            <Nav.Link href="/ProfilePage">Profile </Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="#" onClick={Logout}>
