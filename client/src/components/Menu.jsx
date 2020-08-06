@@ -3,8 +3,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { useHistory } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { AppContext, AppContextProvider } from '../context/AppContext';
+import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 
 export default function Menu() {
@@ -30,7 +29,7 @@ export default function Menu() {
   const signedIn = (
     <div>
       <Navbar expand="lg" bg="dark" variant="dark" className="navbar-custom">
-        <Navbar.Brand href="/companies/me">S M A R T A G E N D A</Navbar.Brand>
+        <Navbar.Brand>S M A R T A G E N D A</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -40,7 +39,7 @@ export default function Menu() {
           </Nav>
           <Nav>
             <Nav.Link href="#" onClick={Logout}>
-              sign out
+              Sign out
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
