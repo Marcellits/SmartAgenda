@@ -11,19 +11,19 @@ export default function Menu() {
   const history = useHistory();
 
   const Logout = async () => {
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem('token');
     await axios({
-      method: "POST",
+      method: 'POST',
       url: `/companies/logout`,
-      headers: {Authorization: `Bearer ${token}`}
+      headers: { Authorization: `Bearer ${token}` }
     })
-    .then(({data}) =>{
-    localStorage.removeItem('token');
-    history.push('/login');
-    window.location.reload();
-  })
-  .catch(e => console.log(e.message.toString()))
-}
+      .then(({ data }) => {
+        localStorage.removeItem('token');
+        history.push('/login');
+        window.location.reload();
+      })
+      .catch((e) => console.log(e.message.toString()));
+  };
   // const { setUser, setLoggedIn } = useContext(AppContext);
   const { user, setUser } = useContext(AppContext);
   const { loggedIn, setLoggedIn } = useContext(AppContext);
@@ -34,8 +34,9 @@ export default function Menu() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/clients">clients</Nav.Link>
-            <Nav.Link href="/ProfilePage">your profile</Nav.Link>
+            <Nav.Link href="/calendar">Calendar </Nav.Link>
+            <Nav.Link href="/clients">Clients </Nav.Link>
+            <Nav.Link href="/ProfilePage">Profile </Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="#" onClick={Logout}>
