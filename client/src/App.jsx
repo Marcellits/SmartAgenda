@@ -21,13 +21,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <AppContextProvider>
-      <Route exact path="/">
+        <Route exact path="/">
           <LoginPage />
         </Route>
-        <Route path="/companies/me">  
-          <Calendar />  
+        <Route path="/calendar">
+          <Calendar />
         </Route>
-        <Route  path="/contacts">
+        <Route path="/contacts">
           <Contacts />
         </Route>
         {/* <Route exact path="/map">

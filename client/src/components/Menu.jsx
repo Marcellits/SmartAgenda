@@ -34,8 +34,14 @@ export default function Menu() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
+<<<<<<< Updated upstream
             <Nav.Link href="/clients">clients</Nav.Link>
             <Nav.Link href="/ProfilePage">your profile</Nav.Link>
+=======
+            <Nav.Link href="/calendar">Calendar </Nav.Link>
+            <Nav.Link href="/clients">Clients </Nav.Link>
+            <Nav.Link href="/ProfilePage">Profile </Nav.Link>
+>>>>>>> Stashed changes
           </Nav>
           <Nav>
             <Nav.Link href="#" onClick={Logout}>
